@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import IndividualBook from './IndividualBook'
 import * as BooksAPI from '../utils/BooksAPI'
 import { Link } from 'react-router-dom'
-// import escapeRegExp from 'escape-string-regexp'
+
 
 class BookSearch extends Component {
 	static propTypes = {
