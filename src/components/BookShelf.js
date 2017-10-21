@@ -4,8 +4,9 @@ import IndividualBook from './IndividualBook'
 
 class BookShelf extends Component {
 	static propTypes = {
-		books: PropTypes.array.isRequired, // this prop is already filtered by book shef once it's called
-		title: PropTypes.string.isRequired
+		books: PropTypes.array.isRequired, // this prop is already filtered by book shelf once it's called
+		title: PropTypes.string.isRequired,
+		onShelfChange: PropTypes.func.isRequired
 		// pass in the function that makes the shelf change possible
 	}
 
@@ -19,7 +20,7 @@ class BookShelf extends Component {
 		        		{this.props.books.map((book) => {
 		        			return (
 		        				<li key={book.id}>
-			        				<IndividualBook book={book}/>
+			        				<IndividualBook book={book} onShelfChange={this.props.onShelfChange}/>
 			        			</li>
 		        			)
 		        		})}
